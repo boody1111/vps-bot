@@ -1,0 +1,12 @@
+[
+  {
+    "time": 1780613185687,
+    "level": "INFO",
+    "message": "[HANDLER] Loaded 298 command entries from 87 files."
+  },
+  {
+    "time": 1780613185999,
+    "level": "ERROR",
+    "message": "[BOOT] appstate.json is empty. Telegram bot is running; Facebook login skipped."
+  }
+]

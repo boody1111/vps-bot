@@ -1,0 +1,18 @@
+{
+  "name": "messenger-bot",
+  "version": "1.0.0",
+  "description": "Facebook Messenger Bot",
+  "main": "Main.js",
+  "scripts": {
+    "start": "node Main.js"
+  },
+  "dependencies": {
+    "@dongdev/fca-unofficial": "^4.0.3",
+    "axios": "^1.6.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "os": "^0.1.2"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.4.3"
+  }
+}

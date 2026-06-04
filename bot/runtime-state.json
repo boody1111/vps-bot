@@ -1,0 +1,43 @@
+{
+  "running": false,
+  "startedAt": null,
+  "account": null,
+  "accountId": null,
+  "region": null,
+  "protections": {
+    "cookieRenewal": {
+      "nextInMs": null,
+      "nextFireAt": null
+    },
+    "siteVisit": {
+      "nextInMs": null,
+      "nextFireAt": null
+    },
+    "ping": {
+      "nextInMs": null,
+      "nextFireAt": null
+    },
+    "graphqlVisit": {
+      "nextInMs": null,
+      "nextFireAt": null
+    }
+  },
+  "botState": {
+    "locked": false,
+    "nameLock": {
+      "active": false,
+      "name": null,
+      "threadId": null
+    }
+  },
+  "modules": {
+    "nameLock": {
+      "active": false,
+      "name": null,
+      "threadId": null
+    },
+    "schedulers": {},
+    "nicknames": {}
+  },
+  "lastUpdated": 1780613183855
+}
