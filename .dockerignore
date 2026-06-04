@@ -1,0 +1,30 @@
+# Dev tooling and editor state
+.local/
+.git/
+.replit
+replit.nix
+attached_assets/
+
+# Logs
+*.log
+
+# All node_modules — reinstalled cleanly inside Docker
+node_modules/
+artifacts/*/node_modules/
+lib/*/node_modules/
+scripts/node_modules/
+bot/node_modules/
+
+# pnpm store
+.pnpm-store/
+
+
+# Bot runtime files — pre-created by the Dockerfile RUN step
+bot/runtime-state.json
+bot/runtime-logs.json
+bot/module-commands.json
+bot/reconnect-signal.json
+
+# Build outputs — rebuilt fresh inside Docker
+artifacts/*/dist/
+lib/*/dist/

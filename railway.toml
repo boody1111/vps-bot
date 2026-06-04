@@ -8,3 +8,25 @@ restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
 healthcheckPath = "/api/healthz"
 healthcheckTimeout = 30
+
+# ── This is a SINGLE-SERVICE deployment ───────────────────────────────────────
+# The Dockerfile builds both the panel and API server, then start.sh launches:
+#   - bot/Main.js      (Facebook Messenger bot)
+#   - API server       (port $PORT, serves /api/* and /panel/*)
+#
+# If Railway auto-detected multiple workspace packages from the monorepo,
+# DELETE those extra services and keep only this one (connected to repo root).
+#
+# ── Required environment variables ────────────────────────────────────────────
+# Set these in the Railway dashboard under Variables:
+#
+#   PORT          — set automatically by Railway, no action needed
+#   APPSTATE      — your Facebook appstate JSON (array), base for appstate.json
+#   BOT_SETTINGS  — bot settings JSON: {"prefix":"/","admins":["ID"],"botName":"Bot"}
+#
+# ── Optional: persistent volume (recommended) ─────────────────────────────────
+# Add a Railway Volume mounted at /data, then set:
+#   BOT_DIR = /data
+#
+# This keeps your cookies, settings, and state files safe across redeploys.
+# Without a volume, BOT_DIR defaults to /app/bot (files reset on each deploy).

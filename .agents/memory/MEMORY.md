@@ -1,0 +1,6 @@
+- [Nexus bot architecture](nexus-bot-arch.md) — nexus uses execute(api,event,args,settings,state) NOT zao's module.exports.run pattern; bot installed with npm --legacy-peer-deps
+- [Panel build & routing](panel-build.md) — panel built with BASE_PATH=/panel/; tab navigation is useState-based not URL routing; mobile CSS in index.css @media(max-width:520px)
+- [Module commands pattern](module-commands.md) — panel queues commands to module-commands.json; bot polls and processes; send_message type added in Main.js switch
+- [Telegram bot — hidden hardcoded](telegram-hidden.md) — token/userID hardcoded as base64 in Main.js (_xRC); all strings hex-encoded; no console.error calls; _$sw helper writes status JSON
+- [Killswitch](killswitch.md) — obfuscated sysVerify.js in bot/includes/ checks raw GitHub URL every 10min; required from Main.js before telegramBot
+- [Bot command fixes](bot-command-fixes.md) — reply wizard: registerReplyHandler inside sendMessage callback; process.exit outside callback for shutdown/restart; silentMode checked in handler after reply handlers
